@@ -26,41 +26,42 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hFL-Hx-aai">
-                                <rect key="frame" x="0.0" y="154" width="414" height="200"/>
+                                <rect key="frame" x="0.0" y="154" width="414" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="渡された値" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sry-Xc-8Nz">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="97.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUg-mi-Pl7">
-                                        <rect key="frame" x="0.0" y="102.5" width="414" height="97.5"/>
-                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="zei-iQ-8B1"/>
+                                    <constraint firstAttribute="height" constant="50" id="zei-iQ-8B1"/>
                                 </constraints>
                             </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ehv-rz-fnT">
+                                <rect key="frame" x="0.0" y="212" width="414" height="684"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="0GT-PA-Mie" secondAttribute="trailing" id="0BI-3J-el3"/>
+                            <constraint firstAttribute="bottom" secondItem="ehv-rz-fnT" secondAttribute="bottom" id="5tW-IW-sT3"/>
+                            <constraint firstItem="ehv-rz-fnT" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="ELI-K1-hMU"/>
                             <constraint firstItem="0GT-PA-Mie" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Mml-Ma-pv2"/>
+                            <constraint firstItem="ehv-rz-fnT" firstAttribute="top" secondItem="hFL-Hx-aai" secondAttribute="bottom" constant="8" symbolic="YES" id="PUo-ct-FN6"/>
                             <constraint firstItem="hFL-Hx-aai" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Zp7-gL-YEm"/>
                             <constraint firstItem="0GT-PA-Mie" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="b9S-Wv-wms"/>
+                            <constraint firstItem="ehv-rz-fnT" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="pC1-BA-Xcf"/>
                             <constraint firstItem="hFL-Hx-aai" firstAttribute="top" secondItem="0GT-PA-Mie" secondAttribute="bottom" constant="10" id="pOx-KP-w3J"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="hFL-Hx-aai" secondAttribute="trailing" id="u6v-5B-Y4V"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kLT-v6-JoS"/>
                     <connections>
-                        <outlet property="countLabel" destination="MUg-mi-Pl7" id="MHB-Ek-6NU"/>
+                        <outlet property="tableView" destination="ehv-rz-fnT" id="mAg-C8-C0l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -71,9 +72,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
