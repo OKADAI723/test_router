@@ -23,6 +23,7 @@ final class SecondViewController: UIViewController {
     }
     
     @IBAction private func countUpButton(_ sender: Any) {
+        print("カウントされました")
         countModel.count += 1
         countLabel.text = countModel.count.description
     }
